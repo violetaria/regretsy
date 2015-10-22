@@ -1,13 +1,44 @@
 <!DOCTYPE html>
   <head>
-  <title>Regretsy</title>
+    <link rel="stylesheet" href="main.css">
+    <title>Regretsy</title>
   </head>
     <body>
-    <ul>
-        <% data.each do |item|%>
-            <li><%= item %></li>
-        <% end %>
-    </ul>
-
+    <div class="container">
+      <header>
+        <img src="etsy-logo.png">
+        <form action="/search" method="post">
+          <input type="text" name="search_term" value="Search for items or shops">
+          <input type="submit" value="Search">
+        </form>
+      </header>
+      <nav>
+          <p>All Categories</p>
+          <ul>
+            <li><a href="/">Home & Living</a></li>
+            <li><a href="/">Art & Collectibles</a></li>
+            <li><a href="/">Weddings</a></li>
+            <li><a href="/">Clothing</a></li>
+            <li><a href="/">Paper & Party Supplies</a></li>
+            <li><a href="/">Jewelry</a></li>
+            <li><a href="/">Accessories</a></li>
+            <li><a href="/">Craft Supplies & Tools</a></li>
+            <li><a href="/">Bags & Purses</a></li>
+            <li><a href="/">Bath & Beauty</a></li>
+            <li><a href="/">Shoes</a></li>
+            <li><a href="/">Books, Movies & Music</a></li>
+            <li><a href="/">Electronics & Accessories</a></li>
+            <li><a href="/">Toys & Games</a></li>
+            <li><a href="/">Pet Supplies</a></li>
+          </ul>
+        </nav>
+        <section>
+          <ul>
+            <% data.each do |item|%>
+                <li><%= item %></li>
+            <% end %>
+            </ul>
+        </section>
+    </div>
     </body>
 </html>

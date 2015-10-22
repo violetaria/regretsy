@@ -1,0 +1,23 @@
+header img{
+    padding: 0px 10px 0px 0px;
+    width: 85px;
+}
+
+header form{
+    display: inline;
+}
+
+header input{
+    color: grey;
+    width: 150px;
+    display: inline;
+}
+
+header input.submit{
+    background-color: blue;
+}
+
+header {
+    border: 1px solid black;
+    display: block;
+}

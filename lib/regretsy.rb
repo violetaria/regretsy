@@ -15,8 +15,9 @@ module Regretsy
       response = Etsy::Request.get('/listings/active',
                                    :includes => ['Images', 'Shop'],
                                    :keywords => 'purple')
+
+      #binding.pry
       erb :index, locals: { data: response.result }
-#      binding.pry
     end
 
     run! if app_file == $0
