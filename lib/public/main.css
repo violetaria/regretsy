@@ -1,5 +1,5 @@
 header img{
-    padding: 0px 10px 0px 0px;
+    vertical-align: middle;
     width: 85px;
 }
 
@@ -7,10 +7,21 @@ header form{
     display: inline;
 }
 
-header input{
+input{
     color: grey;
+    height: 20px;
     width: 150px;
     display: inline;
+    vertical-align: middle;
+    padding: 0px;
+    margin: 0px;
+    border: 1px blue solid;
+}
+
+input[type="submit"]
+{
+    color: white;
+    background-color: blue;
 }
 
 header input.submit{
@@ -20,4 +31,33 @@ header input.submit{
 header {
     border: 1px solid black;
     display: block;
+}
+
+nav{
+    float: left;
+    width: 20%;
+    display: inline;
+    padding: 5px;
+    margin-bottom: 100%;
+}
+
+section {
+    margin-left: 20%;
+}
+
+ul{
+    list-style-type: none;
+    display: inline;
+
+}
+
+li img{
+    width: 250px;
+    height: 250px;
+}
+
+.items {
+    width: 30%;
+    margin: 5px 5px;
+    float: left;
 }
