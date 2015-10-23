@@ -14,7 +14,7 @@ module Regretsy
       Etsy.api_key = "#{settings.auth_key}"
       response = Etsy::Request.get('/listings/active',
                                    :includes => ['Images', 'Shop'],
-                                   :keywords => 'purple')
+                                   :keywords => 'whiskey')
 
       #binding.pry
       erb :index, locals: { data: response.result }

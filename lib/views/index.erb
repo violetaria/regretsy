@@ -33,11 +33,14 @@
           </ul>
         </nav>
         <section>
-          <ul>
+
             <% data.each do |item|%>
-                <li class="items"><img src="<%= item["Images"].first["url_fullxfull"] %>"></li>
+                <div class="items">
+                  <p><img src="<%= item["Images"].first["url_fullxfull"] %>"></p>
+                  <p><%= item["title"] %></p>
+                  <p><%= item["Shop"]["shop_name"] %> - <%= item["price"] %></p>
+                </div>
             <% end %>
-            </ul>
         </section>
     <!--</div>-->
     </body>
