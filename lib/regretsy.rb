@@ -12,12 +12,14 @@ module Regretsy
 
     get "/search" do
       Etsy.api_key = "#{settings.auth_key}"
-      response = Etsy::Request.get('/listings/active',
-                                   :includes => ['Images', 'Shop'],
-                                   :keywords => 'whiskey')
+      response = Etsy::Request.get("/listings/active",
+                                   :includes => ["Images", "Shop"],
+                                   :keywords => "whiskey")
 
-      #binding.pry
-      erb :index, locals: { data: response.result }
+#      binding.pry
+      erb :index, locals: { data: response.result,
+                            search_term: "whiskey",
+                            results_count: response.to_hash["count"].to_s }
     end
 
     run! if app_file == $0

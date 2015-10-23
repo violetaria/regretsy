@@ -14,29 +14,33 @@
       </header>
       <nav>
           <h4>Show results for:</h4>
-          <ul>
-            <li>All Categories</li>
-            <ul>
-                <li><a href="/">Home & Living</a></li>
-                <li><a href="/">Art & Collectibles</a></li>
-                <li><a href="/">Weddings</a></li>
-                <li><a href="/">Clothing</a></li>
-                <li><a href="/">Paper & Party Supplies</a></li>
-                <li><a href="/">Jewelry</a></li>
-                <li><a href="/">Accessories</a></li>
-                <li><a href="/">Craft Supplies & Tools</a></li>
-                <li><a href="/">Bags & Purses</a></li>
-                <li><a href="/">Bath & Beauty</a></li>
-                <li><a href="/">Shoes</a></li>
-                <li><a href="/">Books, Movies & Music</a></li>
-                <li><a href="/">Electronics & Accessories</a></li>
-                <li><a href="/">Toys & Games</a></li>
-                <li><a href="/">Pet Supplies</a></li>
+            <ul class="left-nav-bar">
+              <li class="nav-title">All Categories</li>
+                <li class="nav-link"><a href="/">Home & Living</a></li>
+                <li class="nav-link"><a href="/">Art & Collectibles</a></li>
+                <li class="nav-link"><a href="/">Weddings</a></li>
+                <li class="nav-link"><a href="/">Clothing</a></li>
+                <li class="nav-link"><a href="/">Paper & Party Supplies</a></li>
+                <li class="nav-link"><a href="/">Jewelry</a></li>
+                <li class="nav-link"><a href="/">Accessories</a></li>
+                <li class="nav-link"><a href="/">Craft Supplies & Tools</a></li>
+                <li class="nav-link"><a href="/">Bags & Purses</a></li>
+                <li class="nav-link"><a href="/">Bath & Beauty</a></li>
+                <li class="nav-link"><a href="/">Shoes</a></li>
+                <li class="nav-link"><a href="/">Books, Movies & Music</a></li>
+                <li class="nav-link"><a href="/">Electronics & Accessories</a></li>
+                <li class="nav-link"><a href="/">Toys & Games</a></li>
+                <li class="nav-link"><a href="/">Pet Supplies</a></li>
               </ul>
           </ul>
       </nav>
         <section>
-            <% data.each do |item|%>
+          <div class="image-header">
+            <span class="category">
+              <a href="/search?q=<%= search_term %>">All Categories</a><span class="strong"> > </span> "<%= search_term %>” (<%= results_count %> Results)</span>
+            <span class="sortby">Sort by: Relevency (drop down)</span>
+          </div>
+            <% data.each do |item| %>
             <div class="item">
                     <div class="image"><img src="<%= item["Images"].first["url_170x135"] %>"></div>
                     <div class="title"><%= item["title"] %></div>

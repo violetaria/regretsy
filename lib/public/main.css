@@ -6,9 +6,24 @@
 
 body {
     color: #222;
-    font-family: Arial, sans-serif;
+    font-family: "Graphik Web","Arial","Helvetica",sans-serif;
     font-size: 14px;
     background-color: #F5F5F1;
+}
+
+.container{
+    padding: 2% 10%;
+    margin: 0px;
+    height: 100%;
+}
+
+.header-container{
+    background-color: white;
+}
+
+header {
+    margin: 2px;
+    display: block;
 }
 
 header img{
@@ -37,18 +52,30 @@ input[type="submit"]
     background-color: blue;
 }
 
+a{
+    color: #0192B5;
+    text-decoration: none;
+}
 
 header {
-    border: 1px solid black;
     display: block;
+    border-bottom: grey;
 }
 
 nav{
+    width: 25%;
     float: left;
-    max-width: 20%;
-    display: inline;
     padding: 5px;
     margin-bottom: 100%;
+}
+
+nav ul li.nav-title{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+nav ul li.nav-link{
+    margin: 5px 0px;
 }
 
 nav h4 {
@@ -56,15 +83,25 @@ nav h4 {
     margin: 10px 0px 0px 0px;
 }
 
+ul.left-nav-bar{
+    background-color: white;
+    padding: 10px;
+    border: 1px #E1E3DF solid;
+    border-radius: 2px;
+    max-width: 100%;
+}
+
+
+
 ul{
-    list-style-type: none;
+    list-style: none;
     padding: 0px;
     margin: 0px;
 }
 
 section {
-    margin-left: 20%;
-    max-width: 80%
+    margin-left: 25%;
+    max-width: 100%;
 }
 
 div.item {
@@ -127,8 +164,17 @@ div.item li{
     content: " USD"
 }
 
+.image-header{
+    margin-top: 5px;
+}
+
 .image-footer{
     padding: 0px 5px;
     margin-top: 2px;
     margin-bottom: 2px;
+}
+
+.strong {
+    color: #555;
+    font-weight: bold;
 }
