@@ -37,14 +37,11 @@
       </nav>
         <section>
             <% data.each do |item|%>
-                  <ul class="item">
-                    <li class="image"><img src="<%= item["Images"].first["url_170x135"] %>"></li>
-                    <li class="title"><%= item["title"] %></>
-                    <!--<li class="shop"><%= item["Shop"]["shop_name"] %></li>
-                    <li class="price">$<%= item["price"] %> <%= item["currency_code"] %></li>-->
-                    <li class="image-footer"><span class="shop"><%= item["Shop"]["shop_name"] %> </span><span class="price"><%= item["price"] %></span></li>
-                </ul>
-
+            <div class="item">
+                    <div class="image"><img src="<%= item["Images"].first["url_170x135"] %>"></div>
+                    <div class="title"><%= item["title"] %></div>
+                    <div class="image-footer"><span class="shop"><%= item["Shop"]["shop_name"] %> </span><span class="price"><%= item["price"] %></span></div>
+            </div>
             <% end %>
         </section>
     </div>

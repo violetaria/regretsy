@@ -67,28 +67,29 @@ section {
     max-width: 80%
 }
 
-ul.item {
+div.item {
     float: left;
     width: 25%;
     height: 230px;
     border: 1px solid #CBCCC9;
-    padding: 10px;
+    padding: 0px;
     margin: 10px;
+    border-radius: 2px;
 }
 
-li.image img{
+div.image img{
     width: 100%;
     height: 100%;
 }
 
-li.image{
+div.image{
     height: 179px;
-    width: 225px;
+    max-width: 100%;
     padding: 0px;
     margin: 0px;
 }
 
-ul.item li{
+div.item li{
     display: block;
 }
 
@@ -101,21 +102,20 @@ ul.item li{
     white-space: nowrap;
     max-width: 100%;
     margin-top: 5px;
+    padding: 5px;
 }
 
 .shop{
     font-size: 12px;
-    color: grey;
+    color: #AAA;
     font-family: Arial, sans-serif;
     float: left;
-    margin-top: 5px;
 }
 
 .price{
     float: right;
     font-size: 12px;
     font-family: Arial, sans-serif;
-    margin-top: 5px;
     color: #78c042;
 }
 
@@ -128,5 +128,7 @@ ul.item li{
 }
 
 .image-footer{
-    padding: 2px;
+    padding: 0px 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
