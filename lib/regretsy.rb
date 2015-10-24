@@ -11,15 +11,22 @@ module Regretsy
     set :auth_key, "#{ENV["AUTH_KEY"]}"
 
     get "/search" do
-      Etsy.api_key = "#{settings.auth_key}"
-      response = Etsy::Request.get("/listings/active",
-                                   :includes => ["Images", "Shop"],
-                                   :keywords => "whiskey")
+      if params["q"]
+        Etsy.api_key = "#{settings.auth_key}"
+        response = Etsy::Request.get("/listings/active",
+                                     :includes => ["Images", "Shop"],
+                                     :keywords => params["q"])
+
+        erb :index, locals: { data: response.result,
+                              search_term: params["q"],
+                              results_count: response.to_hash["count"].to_s }
+      else
+        status 204
+        { message: "You must supply search query." }
+      end
 
 #      binding.pry
-      erb :index, locals: { data: response.result,
-                            search_term: "whiskey",
-                            results_count: response.to_hash["count"].to_s }
+
     end
 
     run! if app_file == $0
