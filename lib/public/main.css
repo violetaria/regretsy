@@ -12,18 +12,16 @@ body {
 }
 
 .container{
-    padding: 2% 10%;
+    padding-top: 10px;
+    padding-right: 10%;
+    padding-left: 10%;
     margin: 0px;
-    height: 100%;
-}
-
-.header-container{
-    background-color: white;
 }
 
 header {
-    margin: 2px;
+    margin: 0px;
     display: block;
+    background-color: white;
 }
 
 header img{
@@ -35,26 +33,45 @@ header form{
     display: inline;
 }
 
-input{
+input[type="text"]{
     color: grey;
-    height: 20px;
-    width: 150px;
+    height: 35px;
+    width: 250px;
     display: inline;
     vertical-align: middle;
     padding: 0px;
-    margin: 0px;
-    border: 1px blue solid;
+    margin: 0px 0px 3px 0px;
+    border: 1px solid #CFCBC8;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 13px;
+    position: relative;
 }
+
 
 input[type="submit"]
 {
-    color: white;
-    background-color: blue;
+    background-color: #34A8C4;
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 2px;
+    text-align: center;
+    height: 35px;
+    display: inline;
+    padding: 7px 15px 8px;;
 }
 
-a{
+a, a:link, a:visited{
     color: #0192B5;
     text-decoration: none;
+}
+
+a:hover, a:focus, a:active{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 header {
@@ -70,17 +87,25 @@ nav{
 }
 
 nav ul li.nav-title{
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    line-height: 1.4;
+    font-size: 13px;
+    color: #555;
 }
 
 nav ul li.nav-link{
-    margin: 5px 0px;
+    margin: 5px 0px 5px 10px;
+
 }
 
 nav h4 {
     padding: 0px;
     margin: 10px 0px 0px 0px;
+    color: #555;
+    font-size: 13px;
+    padding-bottom: 10px;
 }
 
 ul.left-nav-bar{
@@ -102,6 +127,19 @@ ul{
 section {
     margin-left: 25%;
     max-width: 100%;
+}
+
+span.sortby{
+    float: right;
+}
+
+span.sortby select{
+    color: #0192B5;
+    font-weight: 400;
+    font-size: 13px;
+    border: 0px;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 div.item {
@@ -149,6 +187,13 @@ div.item li{
     float: left;
 }
 
+.shop a{
+    font-size: 12px;
+    color: #AAA;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
 .price{
     float: right;
     font-size: 12px;
@@ -177,4 +222,34 @@ div.item li{
 .strong {
     color: #555;
     font-weight: bold;
+}
+
+ul.menu{
+    margin: 0px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    padding: 0px;
+    color: #888;
+}
+
+ul.menu li{
+    width: 10%;
+    padding: 5px 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    display: inline;
+}
+
+div.menu{
+    background-color: white;
+    border-top: 1px solid #DCDCD9;
+    border-bottom: 1px solid #DCDCD9;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+div.search{
+    padding: 2% 10%;
 }
